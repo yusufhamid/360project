@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown("slow");
+    });
+});
+</script>
+ 
+<style> 
+body {
+       
+          background-color: #e5eecc;
+            }
+
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</style>
+</head>
+<body>
+<center>
+ <h4> Please Select One </h4>
+	<a href="http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/newtest" target="_top">
+	<button type="button">Make Appointment</button></a>
+	
+	<a href="http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/cancelappointment" target="_top">
+	<button type="button">Cancel Appointment</button></a> 
+  
+  	<a href="https://swedish.bhawk.com/index.asp" target="_top">
+   	<button type="button">Make Payments</button></a>
+</center>
+<div id="flip">Click here for feedback and comment</div>
+<div id="panel">Submit this form
+ <form action="https://formspree.io/ymhm444@gmail.com" method="post"> 
+ Name: <input type="text" name="name"><br> 
+ E-mail: <input type="text" name="email"><br> 
+Comment: <textarea name="comment" rows="5" cols="40"></textarea> 
+<br><br> 
+<input type="submit"> 
+</form> 
+
+</div>
+
+</body>
+</html>
