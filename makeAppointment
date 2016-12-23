@@ -1,0 +1,83 @@
+
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+</script>
+<script>
+function postContactToGoogle() {
+var name=$('#name').val();
+var email=$('#email').val();
+var SSN=$('#SSN').val();
+var Doctorname=$('#Doctorname').val();
+var Appointmentdate=$('#Appointmentdate').val();
+var Appointmenttime=$('#Appointmenttime').val();
+var comment=$('#comment').val();
+
+$.ajax({
+url:"https://docs.google.com/forms/d/e/1FAIpQLSc8WLdl-HJTKXB9ot5t83VAtKrK_F9Qdkr7zlDI59j5gF1ZYQ/formResponse",data:{"entry_1333551639":name,"entry_293407376":email,"entry_1423079442":SSN,"entry_369330573":Doctorname,"entry_856556873":Appointmentdate,"entry_688389569":Appointmenttime,"entry_1292371793":comment},type:"POST",dataType:"xml",statusCode: {0:function() { window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");},200:function(){window.location.replace("http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Thankyou");}}
+});
+}
+</script>
+<style>
+.FormRequest {
+background: lightyellow;
+width:400px;
+height:250px;
+border:1px solid blue;
+border-radius:10px 10px 10px 10px;
+}
+.FormRequest #formRequest{
+margin-left:20px;
+font-family:consolas;
+color: blue;
+}
+.FormRequest #formRequest input[type="button"],input[type="reset"]{
+border:1px solid green;
+background: darkred;
+color:white;
+border-radius:3px 3px 3px 3px;
+}
+</style>
+</head>
+<body bgcolor="silver">
+
+<table  class="FormRequest" align="center">
+<tr><td>
+<form id="formRequest">
+
+Name:<br/>
+<input type="text" name="name" id="name" placeholder="Name" /><br/>
+
+Email:<br/>
+<input type="text" name="email" id="email" maxlength="30" placeholder="email" /><br/>
+
+SSN:<br/>
+<input type="text" name="SSN" id="SSN" placeholder="SSN" /><br/>
+
+<p5>Please <a href="http://www.fablabtacoma.com/Calendar" target="_blank">Click Here</a> to see doctor's availablity! </P5><br/>
+<br/>
+Doctor name:<br/>
+<input type="text" name="Doctorname" id="Doctorname" placeholder="Doctorname" /><br/>
+
+Appointment date:<br/>
+<input type="text" name="Appointmentdate" id="Appointmentdate" placeholder="Appointmentdate" /><br/>
+
+Appointment time:<br/>
+<input type="text" name="Appointmenttime" id="Appointmenttime" placeholder="Appointmenttime" /><br/>
+
+Comment:<br/>
+<input type="text" name="comment" id="comment" placeholder="comment" /><br/>
+
+<center>
+<input type="button" name="Submit" id="Submit" onclick="postContactToGoogle()" value="Submit"/>
+<input type="reset" value="Reset"/>
+</center>
+
+
+</form>
+
+</td></td>
+</table>
+
+</body>
+</html>
