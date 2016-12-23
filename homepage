@@ -1,0 +1,44 @@
+
+<html>
+      <title>Online Appointment</title>
+      <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+      </head>
+   
+   <style>
+     /* h2{background-color:#AB396F;border-radius:80px;color:green;}*/
+             
+      body {
+           background-image: url("https://cloud.githubusercontent.com/assets/23178208/20582512/a197f51e-b196-11e6-80bf-95254d6d3fe2.PNG");
+           background-size: 100% 100%;
+    background-repeat: no-repeat;
+          /*  background-color: #cccccc;*/
+            }
+	  
+	   div.relative { 
+		position: relative; 
+  	left: 400px;  
+	   }
+	</style>
+
+	<body>
+			<div class="relative">
+				<h4> Online Appointments </h4>
+	<form action="welcome_get.php" method="get">
+	<p>username: <input type="text" name="name" >
+	password: <input type="text" name="password" >
+	<a href="http://htmlpreview.github.io/?https://github.com/project3601/appleproject360.github.io/blob/master/Guider" target="_top">
+	<button type="button">Submit</button></a>
+	<a href="https://docs.google.com/forms/d/e/1FAIpQLSfIsxBmm6h5Kkd3aAcdZtFu7dBt7kw2g8YefRJ9uzKLv4B_Iw/viewform" target="_blank">New Account</a></p>
+				</form>
+
+
+			</div><!-- end home -->
+		
+		
+</body>
+</html>
